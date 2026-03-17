@@ -1,0 +1,138 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+  overflow: hidden;
+}
+
+.app-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  max-width: 400px;
+  text-align: center;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-container input[type = "text"] {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+
+
+.add-btn {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #2980b9;
+}
+
+.add-btn:active {
+  background-color: #1c5980;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  border-bottom: 1px solid #dcdfe6;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  word-break: break-word;
+}
+
+.todo-list li:hover {
+  background-color: #f9f9f9;
+}
+
+.todo-list li span {
+  flex-grow: 1;
+  margin-right: 200px;
+}
+
+.todo-list li.completed span {
+  text-decoration: line-through;
+  color: #999;
+  background-color: #e0e0e0;
+}
+
+.todo-list li.completed {
+  background-color: #e0e0e0;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  border: none;
+  color: #fff;
+  font-size: 1em;
+  padding: 8px 13px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.delete-btn:hover {
+  color: #c0392b;
+}
+
+.delete-btn:active {
+  color: #962d22;
+}
+
+.todo-list:empty::after {
+  content: "No tasks yet! Add a task to get started.";
+  display: block;
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  margin-top: 20px;
+}
